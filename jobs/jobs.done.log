@@ -1,0 +1,15 @@
+# job id ; job guid ; status id; status ; orig filename ; targetfilename ; md5 ; email;
+#
+# Polyzoomer Job Log 
+# Author: Sebastian Schmittner
+# Date: 2014.08.21
+# LastAuthor: Sebastian Schmittner
+# LastDate: 2014.09.06 15:20:32 (+02:00)
+# Version: 1.0.4
+# 
+# 1:   pending -> 
+# 2:   upload -> uploading -> uploaded -> putToOwnFolder -> 
+# 3:   estimateSize -> 
+# 4:   readyForQueue -> inQueue ->
+# 5:   processing ->
+# 6:   finished -> emailSent -> readyToBeRemoved

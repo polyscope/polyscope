@@ -1,0 +1,650 @@
+/* userpage.css
+   Author: Sebastian Schmittner
+   Date: 2014.10.14
+   LastAuthor: Sebastian Schmittner
+   LastDate: 2015.06.15 12:50:01 (+02:00)
+   Version: 0.1.9
+*/
+
+html {
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1em; 
+  background-color: #666666;
+  color: #FFFFFF;
+}
+
+a { text-decoration:none; }
+a:link { color: #FFFFFF; }
+a:visited { color: #FFFFFF; }
+a:focus { color: #AA8800; }
+a:hover { color: #FFFF00; }
+a:active { color: #FFFFFF; font-weight: bold; }
+
+.main {
+	position: absolute;
+	height: 99%;
+	width: 99%;
+}
+
+/* left pane */ 
+.leftpane {
+	position: absolute;
+	width: 12.5%;
+	min-width: 210px;
+	height: 100%;
+	display: inline;
+}
+
+	.sortingmenu {
+      height: 50px;
+	  border-style: solid;
+	  border-color: #999999;
+	  border-width: 1px;
+	}
+	
+		div.icon.filter {
+			/*position: absolute;*/
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_filter_rest.png') 0 0;
+		}
+
+		div.icon.filter:hover {
+			background: url('userpage_filter_hover.png') 0 0;
+		}
+
+		div.icon.filter:active {
+			background: url('userpage_filter_pressed.png') 0 0;
+		}
+
+		div.icon.filter.filterOn {
+			background: url('userpage_filter_pressed.png') 0 0;
+		}
+		
+
+		div.icon.sort {
+			/*position: absolute;*/
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_sort_rest.png') 0 0;
+		}
+
+		div.icon.sort:hover {
+			background: url('userpage_sort_hover.png') 0 0;
+		}
+
+		div.icon.sort:active {
+			background: url('userpage_sort_pressed.png') 0 0;
+		}
+		
+		
+		div.icon.switchzooms {
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_switchzooms_rest.png') 0 0;
+		}
+
+		div.icon.switchzooms.singleZoomsSelected {
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_switchzooms_singlezooms_selected.png') 0 0;
+		}
+
+		div.icon.switchzooms.singleZoomsSelected:hover {
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_switchzooms_multizooms_selected.png') 0 0;
+		}
+
+		div.icon.switchzooms.singleZoomsSelected:active {
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_switchzooms_multizooms_pressed.png') 0 0;
+		}
+
+		div.icon.switchzooms.multiZoomsSelected {
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_switchzooms_multizooms_selected.png') 0 0;
+		}
+		
+		div.icon.switchzooms.multiZoomsSelected:hover {
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_switchzooms_singlezooms_selected.png') 0 0;
+		}
+
+		div.icon.switchzooms.multiZoomsSelected:active {
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_switchzooms_singlezooms_pressed.png') 0 0;
+		}
+				
+		div.icon.deleteZooms{
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_delete_large_rest.png') 0 0;
+		}
+
+		div.icon.deleteZooms:hover {
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_delete_large_hover.png') 0 0;
+		}
+
+		div.icon.deleteZooms:active {
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			background: url('userpage_delete_large_pressed.png') 0 0;
+		}
+
+	.samplelist {
+	  height: calc(93% - 52px);
+	  border-style: solid;
+	  border-color: #999999;
+	  border-width: 1px;
+	  top: 0%;
+	  overflow: hidden;
+	  overflow-y: scroll;
+	}
+	
+		table {
+			width: 100%;
+		}
+
+			img {
+			  border-style: solid;
+			  border-color: #FFFFFF;
+			  border-width: 1px;
+			  margin: 5%;
+			  width: 90%;
+			  height: auto;
+			}
+
+	.status {
+	  height: 5.5%;
+	  border-style: solid;
+	  border-color: #999999;
+	  border-width: 1px;
+	  bottom: 1.0%;
+}
+
+/* right pane */
+.rightpane {
+	width: 87.5%;
+	max-width: calc(100% - 210px);
+	height: 100%;
+	position: absolute;
+	right: 0%;
+}
+
+	/* elements */
+	.centerPage {
+	  height: calc(100% - 62px - 1.3%);
+	  top: 0%;
+	  width: 100%;
+	  left: 0%;
+	}
+
+		.header {
+		  height: 10%;
+		  border-style: solid;
+		  border-color: #999999;
+		  border-width: 1px;
+		  top: 0px;
+		}
+		
+			.header .title {
+				margin: 0%;
+				margin-top: 1%;
+			}
+			
+			.header .email {
+				margin: 0%;
+			}
+			
+			.header div {
+				text-align: center;
+			}
+
+		.raster {
+		  height: 90%;
+		  border-style: solid;
+		  border-color: #999999;
+		  border-width: 1px;
+		  bottom: 0px;
+		}
+		
+		
+		.sampleCell {
+			border-style: solid;
+			border-color: #FFFFFF;
+			border-width: 2px;
+
+		}
+		
+		div.icon.trash{
+			position: absolute;
+			margin: 5px;
+			top: 0px;
+			right: 0px;
+			background: url('userpage_delete_rest.png') 0 0;
+		}
+
+		div.icon.trash:hover {
+			background: url('userpage_delete_hover.png') 0 0;
+		}
+
+		div.icon.trash:active {
+			background: url('userpage_delete_pressed.png') 0 0;
+		}
+
+		div.icon.alpha {
+			position: absolute;
+			margin: 5px;
+			top: 0px;
+			right: 32px;
+			background: url('userpage_alpha_rest.png') 0 0;
+		}
+
+		div.icon.alpha:hover {
+			background: url('userpage_alpha_hover.png') 0 0;
+		}
+
+		div.icon.alpha:active {
+			background: url('userpage_alpha_pressed.png') 0 0;
+		}
+
+		div.icon.alpha.active {
+			background: url('userpage_alpha_pressed.png') 0 0;
+		}
+
+		.controls-container {
+			position: absolute;
+			height: 60px;
+			bottom: 1.3%;
+			width: 100%;
+		}
+		
+		.controls {
+		  height: 100%;
+		  border-style: solid;
+		  border-color: #999999;
+		  border-width: 1px;
+		}
+		
+		.button {
+		}
+		
+		.controlLine {
+			height: 90%;
+		}
+
+.selectionList {
+	border: 2px;
+	solid: #ccc;
+	width: 90%;
+	height: 50%;
+	overflow-y: scroll;
+}		
+
+.ui-widget-content {
+	background-color: #666666;
+}
+
+.ui-widget-header {
+	background-color: #444444;
+}
+
+.noclose .ui-dialog-titlebar-close {
+	display: none;
+}
+
+/*
+Port from jQ UI
+*/
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 2px;
+	width: 1.8em;
+	height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 45%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	text-align: right;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+	right: 2px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+	left: 2px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+	right: 1px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+	left: 1px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+
+/*
+	MultiZoomButton
+*/
+
+div#createZoom.button {
+	position: relative;
+	margin: 5px;
+	background: url('userpage_multi_rest.png') 0 0;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+}
+
+div#createZoom.button:hover {
+	background: url('userpage_multi_hover.png') 0 0;
+}
+
+div#createZoom.button:active {
+	background: url('userpage_multi_pressed.png') 0 0;
+}
+
+div#createZoom.button.active {
+	background: url('userpage_multi_pressed.png') 0 0;
+}
+
+/*
+	Apply Template Button
+*/
+
+div#applyTemplate.button {
+	position: relative;
+	margin: 5px;
+	background: url('userpage_applytemplate_rest.png') 0 0;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+}
+
+div#applyTemplate.button:hover {
+	background: url('userpage_applytemplate_hover.png') 0 0;
+}
+
+div#applyTemplate.button:active {
+	background: url('userpage_applytemplate_pressed.png') 0 0;
+}
+
+div#applyTemplate.button.active {
+	background: url('userpage_applytemplate_pressed.png') 0 0;
+}
+
+div#sendCode.button {
+	position: relative;
+	margin: 5px;
+	background: url('userpage_code_rest.png') 0 0;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+}
+
+div#sendCode.button:hover {
+	background: url('userpage_code_hover.png') 0 0;
+}
+
+div#sendCode.button:active {
+	background: url('userpage_code_pressed.png') 0 0;
+}
+
+div#sendCode.button.active {
+	background: url('userpage_code_pressed.png') 0 0;
+}
+
+div#startAnalysis.button {
+	position: relative;
+	margin: 5px;
+	background: url('userpage_apps_rest.png') 0 0;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+}
+
+div#startAnalysis.button:hover {
+	background: url('userpage_apps_hover.png') 0 0;
+}
+
+div#startAnalysis.button:active {
+	background: url('userpage_apps_pressed.png') 0 0;
+}
+
+div#startAnalysis.button.active {
+	background: url('userpage_apps_pressed.png') 0 0;
+}
+
+/*
+	Span Tag System
+*/
+
+span.tag {
+	color: #FFF;
+	background-color: transparent;
+}
+
+span.tag.spanActive {
+	color: #000;
+	background-color: #FFFF00;
+}
+
+span.tag.spanMatch {
+	color: #000;
+	background-color: #00FF00;
+}
+
+#tagselector p {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+#tagselector label {
+	display: block;
+}
+
+#tagselector label:hover {
+	background-color: #888;
+}
+
+#tagBlocker {
+  z-index: 200;
+  background-color: rgba(80, 80, 80, 0.8);
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#tagselector {
+	border: 1px solid #FFF;
+}
+
+div.refresh {
+	position: absolute;
+	top: -2px;
+	right: -1px;
+	background: url('userpage_refresh_rest.png') 0 0;
+	width: 48px;
+	height: 48px;
+}
+
+div.refresh.active {
+	position: absolute;
+	top: -2px;
+	right: -1px;
+	background: url('userpage_refresh_full.png') 0 0;
+	width: 48px;
+	height: 48px;
+}
